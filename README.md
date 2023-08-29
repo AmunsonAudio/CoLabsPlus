@@ -12,6 +12,11 @@
 xcrun altool --store-password-in-keychain-item "Notarization-PASSWORD" -u "login@appleid.email" -p "YOUR-PASS-WORD-HERE"
 ```
 
+Replace these:
+
+- `login@appleid.email` with your Apple ID login
+- `YOUR-PASS-WORD-HERE` with the app-specific passwrd you generated (you have to copy it right after generating)
+
 2- Make sure you have these 2 certs and 2 private keys:
 
 <img width="372" alt="image" src="https://github.com/AmunsonAudio/CoLabsPlus/assets/5114111/285e120c-ab8a-4c65-b9a9-dc25786b0040">
@@ -31,6 +36,8 @@ APPLEASC=M3Y658T3JB APPLEID=dennis.s.lysenko@gmail.com INSTSIGNID=B7CFE6EC9EAE1A
 Replace these:
 
 - `APPLEASC`: refers to apple dev team (Amunson Audio LLC)
-- `APPLEID`: replace with your own
+- `APPLEID`: replace with your own apple ID email of your account on App Store Connect
+
+**INSTSIGNID** is the SHA-1 hash of the Developer ID Installer certificate above. Do not replace this unless it changes. In which case you can look up how to get the SHA-1 hash from Keychain Access.
 
 At the end, DropDMG will open, just direct it to the `release` folder and it'll continue running the script.
